@@ -1,108 +1,440 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Orethread | Find the thread. Move the project.</title>
-  <meta name="description" content="Mining project intelligence, from scattered files to a clearer next decision. Explore Orethread's interactive diligence demo and discuss a pilot.">
-  <meta name="theme-color" content="#F5F8FC"><meta property="og:title" content="Orethread | Find the thread. Move the project."><meta property="og:description" content="Connect the evidence. See what changed. Move your mining project forward."><meta property="og:type" content="website">
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Orethread · Every number has a source</title>
+  <meta name="description" content="Orethread is building an evidence desk for mining project reviews. Explore the source-linked demonstration and discuss an assisted pilot.">
+  <meta name="theme-color" content="#0b0a09">
+  <meta property="og:title" content="Orethread · Every number has a source">
+  <meta property="og:description" content="Mining project intelligence. Every claim threaded back to the page, slide or cell it came from.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theshumba.github.io/orethread-site/">
+  <meta property="og:image" content="https://theshumba.github.io/orethread-site/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/pit-1600.webp" imagesrcset="assets/img/pit-960.webp 960w, assets/img/pit-1600.webp 1600w, assets/img/pit-2400.webp 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
 <a href="#main" class="skip">Skip to content</a>
-<header class="nav-wrap"><nav class="nav container" aria-label="Main navigation">
-  <a class="wordmark" href="#" aria-label="Orethread home"><img src="assets/mark.svg" width="34" height="34" alt="">orethread<span class="wordmark-dot">.</span></a>
-  <div class="nav-links"><a href="#platform">The platform</a><a href="#demo">Try it</a><a href="#team">Our team</a></div>
-  <button class="button button-small" data-enquire="pilot">Let's talk <span aria-hidden="true">↗</span></button>
-</nav></header>
+
+<header class="nav" id="nav">
+  <div class="nav-pill">
+    <a class="brand" href="#top" aria-label="Orethread home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path class="mark-ore" d="M32 3 57 18v28L32 61 7 46V18Zm0 11L17 23v18l15 9 15-9V23Z"/><path class="mark-thread" d="M3 42 22 31l20 4 19-13"/></svg>
+      <span>orethread</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#demo">Demo</a>
+      <a href="#pilot">Pilot</a>
+      <a href="#company">Company</a>
+    </nav>
+    <button class="btn btn-small nav-cta" type="button" data-enquire="pilot">Start a pilot<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="#how">How it works</a>
+    <a href="#demo">Demo</a>
+    <a href="#pilot">Pilot</a>
+    <a href="#company">Company</a>
+    <button class="btn" type="button" data-enquire="pilot">Start a pilot<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true"><span class="rail-fill" id="rail-fill"></span></div>
+
 <main id="main">
-<section class="hero container">
-  <div class="hero-copy">
-    <p class="opening"><span class="signal" aria-hidden="true"></span> A clearer view of your next mining decision</p>
-    <h1>Find the thread.<br>Move the project.</h1>
-    <p class="hero-intro">Your project's story is in the files.<br>Bring it together with AI that connects the evidence, spots the gaps and keeps the next step in sight.</p>
-    <div class="hero-actions"><a class="button" href="#demo">Follow the evidence <span aria-hidden="true">↗</span></a><button class="text-button" data-enquire="pilot">Explore a pilot <span aria-hidden="true">+</span></button></div>
-    <p class="hero-note">For explorers, developers and the people moving them forward.</p>
+
+<section class="hero" data-theme="dark" id="top">
+  <div class="hero-media">
+    <img src="assets/img/pit-1600.webp" srcset="assets/img/pit-960.webp 960w, assets/img/pit-1600.webp 1600w, assets/img/pit-2400.webp 2400w" sizes="100vw" alt="Aerial view of an open-pit mine, its haul roads curving down through terraced benches" fetchpriority="high">
   </div>
-  <div class="hero-art" id="hero-art">
-    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-    <div class="formation" id="formation" role="img" aria-label="An illustrated mineral formation, with layers connected by a copper thread">
-      <svg viewBox="0 0 620 610" class="ore-svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--rock-light)"/><stop offset="1" stop-color="var(--rock-top)"/></linearGradient>
-          <linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop stop-color="var(--rock-mid)"/><stop offset="1" stop-color="var(--rock-dark)"/></linearGradient>
-          <linearGradient id="side" x1="0" x2="1"><stop stop-color="var(--rock-dark)"/><stop offset="1" stop-color="var(--rock-side)"/></linearGradient>
-          <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="var(--ink)" flood-opacity=".14"/></filter>
-        </defs>
-        <g filter="url(#shadow)" class="ore-layer layer-3">
-          <path fill="var(--rock-deep)" d="m106 324 224-130 221 125v91L329 542 106 414Z"/>
-          <path fill="url(#side)" d="m329 454 222-135v91L329 542Z"/>
-          <path fill="url(#top)" d="m106 324 224-130 221 125-222 135Z"/>
-          <path class="vein" d="m114 346 49 29 53-13 46 43 60 35m15 24 61-42 30-5 50-32 66-44"/>
-        </g>
-        <g filter="url(#shadow)" class="ore-layer layer-2">
-          <path fill="url(#front)" d="m90 269 240-139 239 135v59L329 467 90 330Z"/>
-          <path fill="url(#side)" d="m329 408 240-143v59L329 467Z"/>
-          <path fill="var(--rock-light)" d="m90 269 240-139 239 135-240 143Z"/>
-          <path class="ore-seam" d="m94 290 64 34 81 46 50 9 39 25 93-55 63-30 81-47"/>
-          <path class="vein" d="m105 314 29 8 43 31 44 20 57 9 45 31"/>
-        </g>
-        <g filter="url(#shadow)" class="ore-layer layer-1">
-          <path fill="url(#front)" d="m115 216 56-77 155-72 133 49 94 100v59L329 402 115 280Z"/>
-          <path fill="url(#side)" d="m329 345 224-129v59L329 402Z"/>
-          <path fill="url(#top)" d="m115 216 56-77 155-72 133 49 94 100-224 129Z"/>
-          <path fill="var(--rock-peak)" d="m171 139 155-72 133 49-131 49-73 70Z"/>
-          <path fill="var(--rock-light)" d="m115 216 56-77 84 96 73-70 47 50-46 130Z"/>
-          <path fill="var(--rock-top)" d="m328 165 131-49 94 100-178-1Z"/>
-          <g fill="none" stroke="var(--rock-contour)" stroke-width="1.5" opacity=".65"><path d="m147 209 37-43 133-66 125 40 74 68-187 107Z"/><path d="m180 207 34-34 102-48 109 33 53 50-149 82Z"/><path d="m216 207 25-22 75-37 88 24 38 37-113 61Z"/><path d="m252 207 64-35 66 19 26 19-79 41Z"/></g>
-          <path class="ore-seam" d="m123 249 62 29 56 33 40 8 46 35 93-56 63-38 64-19"/>
-        </g>
-        <path class="thread-path" d="M46 443h75l114-68 37-66 71-37 11-117 87-50h114"/>
-        <g class="thread-nodes"><circle cx="235" cy="375" r="7"/><circle cx="343" cy="272" r="7"/><circle cx="441" cy="105" r="7"/></g>
-      </svg>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <div class="hero-pins" id="hero-pins" aria-hidden="true">
+    <svg class="hero-thread" id="hero-thread"><path id="hero-thread-path"/></svg>
+    <div class="pin" data-pin="a"><span class="pin-dot"></span><span class="pin-card"><b>92% recovery</b><small>Investor deck · slide 14</small></span></div>
+    <div class="pin" data-pin="b"><span class="pin-dot"></span><span class="pin-card"><b>85% recovery</b><small>Technical report · page 86</small></span></div>
+    <div class="pin pin-finding" data-pin="c"><span class="pin-dot"></span><span class="pin-card"><b>Same ore? Same process?</b><small>Flagged for the technical lead</small></span></div>
+  </div>
+
+  <div class="hero-content wrap">
+    <p class="eyebrow reveal">Mining project intelligence</p>
+    <h1 class="hero-title"><span class="line"><span>Every number</span></span><span class="line"><span>has a source.</span></span></h1>
+    <div class="hero-side reveal" style="--d:3">
+      <p>An evidence desk for a mining project’s technical reports, drill data, permits, decks and budgets. We are building it to link claims to the exact page or cell they came from, and show your team what changed, what disagrees and what is missing before a partner, lender or buyer starts asking.</p>
+      <div class="actions">
+        <a class="btn" href="#demo">See it work<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <button class="link" type="button" data-enquire="pilot">Start with one project</button>
+      </div>
     </div>
-    <div class="art-label label-top"><span class="file-icon">↳</span><div>Technical report<small>The evidence beneath it all</small></div></div>
-    <div class="art-label label-bottom"><span class="connection-icon">✓</span><div>One connected story<small>From source to next step</small></div></div>
-    <button id="layers-button" class="layers-button" aria-pressed="false"><span aria-hidden="true">≋</span> Explore the layers</button>
   </div>
+  <p class="hero-foot wrap"><span>Kestrel Copper, shown here and in the demo, is a fictional project.</span><a href="#statement" class="scroll-cue">Scroll<span aria-hidden="true"></span></a></p>
 </section>
-<div class="context-strip container"><p>A project moves forward when its information does.</p><div><span>Technical reports</span><span>Drill results</span><span>Permits</span><span>Budgets</span><span>Investor decks</span></div></div>
 
-<section class="platform container section-space" id="platform">
-  <div class="section-intro"><h2>There’s a bigger picture<br>in those scattered files.</h2><p>A folder can hold a project’s history.<br>Orethread is being built to help your team understand it.</p></div>
-  <div class="capabilities">
-    <article><div class="feature-art files-art" aria-hidden="true"><i>PDF</i><i>XLSX</i><i>PPTX</i><span>↘</span></div><h3>Bring the pieces together.</h3><p>Technical reports, permits, spreadsheets and presentations, organised around the project they belong to.</p></article>
-    <article><div class="feature-art thread-art" aria-hidden="true"><svg viewBox="0 0 260 84"><path d="M15 60h45Q95 60 115 30t70 0h60"/><circle cx="60" cy="60" r="7"/><circle cx="150" cy="14" r="7"/><circle cx="227" cy="30" r="7"/></svg></div><h3>See what needs a closer look.</h3><p>Trace a number to its source. Surface a possible conflict. Keep uncertainty visible until someone resolves it.</p></article>
-    <article><div class="feature-art action-art" aria-hidden="true"><span>Review recovery assumption</span><b>Assigned to technical lead</b><i>✓</i></div><h3>Make the next move clear.</h3><p>Turn open questions into owned actions, then bring reviewed evidence into your next diligence conversation.</p></article>
+<section class="statement" data-theme="light" id="statement">
+  <div class="wrap">
+    <p class="statement-text" id="statement-text">A mining project is told across <span class="inline-img" style="--img:url(assets/img/core-boxes-1200.webp)"></span> technical reports, drill logs, assay tables, <span class="inline-img" style="--img:url(assets/img/ponds-1000.webp)"></span> permits, budgets and board decks. The same number turns up in a report, a deck and a spreadsheet, and not always the same way. <em>Our first pilot brings those files together and traces the claims that matter back to their sources, before the other side’s technical team goes looking.</em></p>
   </div>
 </section>
 
-<section class="demo-section" id="demo"><div class="container">
-  <div class="section-intro"><div><p class="small-label">A little less searching. A lot more context.</p><h2>Follow the evidence.</h2></div><p>Try a fictional project. Pick a question,<br>open its sources and decide what happens next.</p></div>
-  <div class="workbench">
-    <div class="workbench-top"><div><span class="project-icon" aria-hidden="true">O</span><strong>Kestrel Copper</strong><span class="demo-badge">Fictional demo</span></div><span class="workbench-status">Diligence review</span></div>
-    <div class="workbench-body">
-      <aside class="question-list" aria-label="Demo questions"><p>Your next questions</p><button data-scenario="recovery" class="question active" aria-pressed="true"><span class="question-symbol">%</span><span>Do the numbers agree?<small>Metallurgical recovery</small></span><span>↗</span></button><button data-scenario="permit" class="question" aria-pressed="false"><span class="question-symbol">▤</span><span>What’s still missing?<small>Permit evidence</small></span><span>↗</span></button><button data-scenario="changes" class="question" aria-pressed="false"><span class="question-symbol">↺</span><span>What changed?<small>Since the last review</small></span><span>↗</span></button><div class="demo-coverage"><span class="coverage-symbol">⌕</span><p>Answers start with evidence.<small>This demo uses three fictional source documents.</small></p></div></aside>
-      <div class="answer-space" aria-live="polite"><div class="answer-heading"><span id="finding-label" class="finding-label">Needs a closer look</span><span id="finding-position">Finding 1 of 3</span></div><h3 id="answer-title"></h3><p id="answer-copy"></p><div class="evidence-grid" id="evidence-grid"></div><div class="answer-note" id="answer-note"></div><div class="demo-action"><div><strong id="action-title"></strong><span id="action-detail"></span></div><button class="button button-small" id="review-button">Assign a review <span aria-hidden="true">+</span></button></div><p class="review-confirmation" id="review-confirmation" role="status"></p></div>
-    </div><div class="workbench-footer"><span>Illustrative workflow. The production platform is in development.</span><button class="text-button" id="reset-demo">Reset demo</button></div>
+<section class="core" data-theme="dark" aria-label="Drill core">
+  <div class="core-track" id="core-track">
+    <figure class="core-piece"><img src="assets/img/core-strip-a-1100.webp" alt="" loading="lazy" width="1100" height="363"><figcaption>Massive sulfide core · Potter Mine, Ontario</figcaption></figure>
+    <figure class="core-piece"><img src="assets/img/core-depth-1100.webp" alt="" loading="lazy" width="1100" height="466"><figcaption>Massive sulfide core · Potter Mine, Ontario</figcaption></figure>
+    <figure class="core-piece"><img src="assets/img/core-strip-b-1100.webp" alt="" loading="lazy" width="1100" height="399"><figcaption>Massive sulfide core · Potter Mine, Ontario</figcaption></figure>
+    <figure class="core-piece"><img src="assets/img/core-depth-2-1100.webp" alt="" loading="lazy" width="1100" height="448"><figcaption>Basaltic lapillistone core · Potter Mine, Ontario</figcaption></figure>
   </div>
-  <div class="demo-footnote"><p>Every answer should have a way back to the evidence.</p><button class="text-button" id="download-example">Download this example <span aria-hidden="true">↓</span></button></div>
-</div></section>
-
-<section class="pilot container section-space" id="pilot">
-  <div class="pilot-copy"><p class="small-label">Start with one real moment</p><h2>Your next financing.<br>Your next partner.<br>A clearer starting point.</h2><p>We’re looking for exploration and development teams preparing for financing, a joint venture or a project review.</p><p>Bring one project. We’ll shape the first pilot around the files, questions and deadline you already have.</p><button class="button" data-enquire="pilot">Discuss your project <span aria-hidden="true">↗</span></button></div>
-  <div class="pilot-route"><div class="route-line" aria-hidden="true"></div><article><span>1</span><div><h3>Start with your files</h3><p>Agree the project, the questions and the evidence that matters.</p></div></article><article><span>2</span><div><h3>Work through the gaps</h3><p>Review findings together and give every open question an owner.</p></div></article><article><span>3</span><div><h3>Leave with a clearer pack</h3><p>A source-linked brief, an evidence index and the next actions.</p></div></article><p class="pilot-detail">An assisted pilot, shaped with your team.<br>Scope and price agreed before work begins.</p></div>
+  <div class="wrap core-copy">
+    <p class="reveal">A drill core is a thread through the ground. Every metre is logged, sampled and labelled with where it came from.</p>
+    <p class="reveal muted" style="--d:1">The claims built on it deserve the same care. <button type="button" class="link" id="pause-core" aria-pressed="false">Pause motion</button> <a class="link" href="credits.html">Photo credits</a></p>
+  </div>
 </section>
 
-<section class="team-section" id="team"><div class="container"><div class="section-intro"><h2>Small team.<br>Deep curiosity.</h2><p>We’re building at the meeting point of mining,<br>software and the decisions that move projects.</p></div><div class="team-grid"><article class="person founder"><div class="person-art founder-art" aria-hidden="true"><span>mn</span><svg viewBox="0 0 240 170"><path d="m-10 125 88-60 74 35 112-85M-10 145l88-60 74 35L264 35M-10 165l88-60 74 35L264 55"/></svg></div><h3>Melusi Ndoro</h3><p>Founder</p><p class="person-bio">Leading the company, customer conversations and the first partnerships.</p><a href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">Meet Melusi <span aria-hidden="true">↗</span></a></article><article class="person"><div class="person-art open-art" aria-hidden="true"><span>〈 / 〉</span><small>A seat at the table</small></div><h3>Product & engineering</h3><p>Co-founder role · Open</p><p class="person-bio">Build thoughtful software people can use without a manual.</p><button class="text-button" data-enquire="product">Build with us <span aria-hidden="true">↗</span></button></article><article class="person"><div class="person-art data-art" aria-hidden="true"><span class="data-node"></span><span class="data-node"></span><span class="data-node"></span><span class="data-node"></span><svg viewBox="0 0 280 170"><path d="m70 60 70 50 70-50m-70 50v38"/></svg><small>A seat at the table</small></div><h3>AI & data</h3><p>Co-founder role · Open</p><p class="person-bio">Make messy information useful, traceable and worth trusting.</p><button class="text-button" data-enquire="ai">Build with us <span aria-hidden="true">↗</span></button></article></div></div></section>
+<section class="proof" data-theme="light" aria-labelledby="proof-title">
+  <div class="wrap">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow reveal">Why it matters</p>
+        <h2 class="reveal" id="proof-title" style="--d:1">The evidence problem is on the record.</h2>
+      </div>
+      <p class="reveal lead" style="--d:2">Regulators, majors and the people who do the work all describe the same thing. Every figure below links to where it came from.</p>
+    </div>
+    <div class="proof-grid">
+      <article class="fact reveal">
+        <p class="fact-figure">54</p>
+        <p class="fact-text">technical reports were amended and refiled after Ontario Securities Commission staff interventions between 2020 and 2023.</p>
+        <a class="fact-source" href="https://www.osc.ca/sites/default/files/2025-06/csa_20250612_43-101_rfc-disclosure-mineral-projects.pdf" target="_blank" rel="noopener noreferrer">Canadian Securities Administrators · June 2025<span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="fact reveal" style="--d:1">
+        <p class="fact-figure">57%</p>
+        <p class="fact-text">of surveyed geoprofessionals call unmanaged historical data a key challenge for their organisation.</p>
+        <a class="fact-source" href="https://www.seequent.com/advancing-exploration-how-technology-innovation-is-powering-the-next-era-of-critical-mineral-discovery/" target="_blank" rel="noopener noreferrer">Seequent, Geoprofessionals Data Management Report · 2026<span aria-hidden="true">↗</span></a>
+      </article>
+      <article class="fact fact-quote reveal" style="--d:2">
+        <p class="fact-figure" aria-hidden="true">“</p>
+        <p class="fact-text">Geoscientists spend a considerable amount of their time finding, cleaning and reconciling data before interpretation can begin.</p>
+        <a class="fact-source" href="https://www.bhp.com/news/bhp-insights/2026/03/from-discovery-to-decisions-data-ai-and-the-future-of-mining" target="_blank" rel="noopener noreferrer">BHP Insights · March 2026<span aria-hidden="true">↗</span></a>
+      </article>
+    </div>
+  </div>
+</section>
 
-<section class="faq container section-space"><h2>A few good questions.</h2><div><details><summary>Can we use Orethread today?<span>+</span></summary><p>You can explore the interactive demo now. The production platform is in development, and we’re inviting teams to discuss an assisted pilot around a real project.</p></details><details><summary>Does it replace our technical advisers?<span>+</span></summary><p>Your team and advisers make the decisions. Orethread is designed to make the supporting evidence easier to find, compare and review.</p></details><details><summary>Do we have to move all our systems?<span>+</span></summary><p>The first pilot starts with a selected set of project documents. It is designed to fit around your existing technical tools, with scope agreed before onboarding.</p></details><details><summary>Can we upload confidential files into this demo?<span>+</span></summary><p>No upload is needed here. This demonstration uses fictional documents only. Access, storage and data handling for a real pilot will be agreed with your team first.</p></details></div></section>
+<section class="how" data-theme="dark" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal" style="--d:1">From scattered files to a pack you can stand behind.</h2>
+    </div>
+    <div class="how-grid">
+      <ol class="steps">
+        <li class="step" data-step="0">
+          <span class="step-no">01</span>
+          <h3>Read everything</h3>
+          <p>Bring the project as it is: technical reports, scanned PDFs, assay spreadsheets, slide decks, permits and budgets. Every page, slide and cell keeps its address.</p>
+        </li>
+        <li class="step" data-step="1">
+          <span class="step-no">02</span>
+          <h3>Thread every claim</h3>
+          <p>Each figure and statement is linked to where it came from, with its date, units and context, so anyone can check it in one click.</p>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step-no">03</span>
+          <h3>Resolve what disagrees</h3>
+          <p>Conflicting numbers, superseded studies and missing documents become findings. Each one shows both sources and gets an owner.</p>
+        </li>
+        <li class="step" data-step="3">
+          <span class="step-no">04</span>
+          <h3>Approve the pack</h3>
+          <p>Sign off a dated, source-linked diligence pack: evidence index, reviewed answers, open questions and the actions that remain.</p>
+        </li>
+      </ol>
+      <div class="stage" aria-hidden="true">
+        <div class="stage-bg"><img src="assets/img/strata-1200.webp" alt="" loading="lazy"></div>
+        <div class="visual is-active" data-visual="0">
+          <div class="files">
+            <div class="file"><span class="file-type">PDF</span><span class="file-name">Kestrel technical report<small>412 pages · searchable</small></span><span class="file-state ok">Read</span></div>
+            <div class="file"><span class="file-type">XLSX</span><span class="file-name">Assays 2026 Q2<small>3 sheets · 18,240 rows</small></span><span class="file-state ok">Read</span></div>
+            <div class="file"><span class="file-type">PPTX</span><span class="file-name">Investor deck, September<small>32 slides</small></span><span class="file-state ok">Read</span></div>
+            <div class="file"><span class="file-type">PDF</span><span class="file-name">Water use application<small>Scanned · 38 pages</small></span><span class="file-state warn">Page 17 unreadable</span></div>
+            <div class="file"><span class="file-type">XLSX</span><span class="file-name">Programme budget<small>Summary and notes</small></span><span class="file-state ok">Read</span></div>
+          </div>
+        </div>
+        <div class="visual" data-visual="1">
+          <div class="claim-card">
+            <p class="mono-label">Claim</p>
+            <p class="claim-value">85% <span>copper recovery</span></p>
+            <div class="claim-thread"><span></span></div>
+            <div class="claim-source">
+              <p class="mono-label">Source</p>
+              <p><b>Kestrel technical report</b><br>PDF page 86 · printed page 78</p>
+              <p class="quote">“The composite sample returned 85% recovery under the tested bench-scale conditions.”</p>
+              <div class="chips"><span>Effective 30 Jun 2026</span><span>Bench-scale test</span><span>Composite sample</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="visual" data-visual="2">
+          <div class="finding-card">
+            <p class="mono-label attention">Possible conflict</p>
+            <div class="finding-pair">
+              <div><b>92%</b><span>Investor deck · slide 14</span><small>Planning assumption</small></div>
+              <div><b>85%</b><span>Technical report · p. 86</span><small>Bench-scale test result</small></div>
+            </div>
+            <p class="finding-note">Not a verdict. The figures may describe different ore or a different process.</p>
+            <div class="finding-owner"><span class="avatar">TL</span><span>Confirm the recovery basis<small>Owner: technical lead · due 14 Oct</small></span></div>
+          </div>
+        </div>
+        <div class="visual" data-visual="3">
+          <div class="pack-card">
+            <div class="pack-head"><span class="mono-label">Diligence pack</span><span class="pack-date">Snapshot · 5 Oct 2026</span></div>
+            <p class="pack-title">Kestrel Copper</p>
+            <ul class="pack-rows">
+              <li><span>Evidence index</span><b>148 sources</b></li>
+              <li><span>Reviewed answers</span><b>30</b></li>
+              <li><span>Findings</span><b>12 · 3 open</b></li>
+              <li><span>Actions</span><b>9 with owners</b></li>
+            </ul>
+            <p class="pack-foot">Every line links to its page, slide or cell. <span>Sample figures.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<section class="closing container"><div><h2>Good projects deserve<br>a clearer picture.</h2><button class="button" data-enquire="pilot">Let's find yours <span aria-hidden="true">↗</span></button></div><div class="closing-symbol" aria-hidden="true"><img src="assets/mark.svg" alt=""></div></section>
+<section class="demo" data-theme="light" id="demo">
+  <div class="wrap">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow reveal">Try it</p>
+        <h2 class="reveal" style="--d:1">Follow the thread.</h2>
+      </div>
+      <p class="reveal lead" style="--d:2">A fictional project and three questions a reviewer would ask. Open the sources, then decide what happens next.</p>
+    </div>
+
+    <div class="bench reveal" style="--d:2">
+      <div class="bench-top">
+        <div class="bench-project"><span class="bench-icon" aria-hidden="true">K</span><b>Kestrel Copper</b><span class="tag">Fictional demo</span></div>
+        <span class="bench-status">Diligence review · 3 documents</span>
+      </div>
+      <div class="bench-body">
+        <div class="questions" role="tablist" aria-label="Questions">
+          <button class="question is-active" role="tab" aria-selected="true" data-scenario="recovery"><span class="q-no">01</span><span>Do the numbers agree?<small>Metallurgical recovery</small></span></button>
+          <button class="question" role="tab" aria-selected="false" data-scenario="permit"><span class="q-no">02</span><span>What is still missing?<small>Permit evidence</small></span></button>
+          <button class="question" role="tab" aria-selected="false" data-scenario="changes"><span class="q-no">03</span><span>What changed?<small>Since the last review</small></span></button>
+        </div>
+        <div class="answer" role="tabpanel" aria-live="polite">
+          <div class="answer-top"><span class="status-label" id="finding-label"></span><span class="answer-count" id="finding-position"></span></div>
+          <h3 id="answer-title"></h3>
+          <p id="answer-copy"></p>
+          <div class="evidence" id="evidence-grid"></div>
+          <p class="answer-note" id="answer-note"></p>
+          <div class="answer-action">
+            <div><b id="action-title"></b><span id="action-detail"></span></div>
+            <button class="btn btn-small" type="button" id="review-button"></button>
+          </div>
+          <p class="answer-done" id="review-confirmation" role="status"></p>
+        </div>
+      </div>
+      <div class="bench-foot"><span>Illustrative workflow with synthetic documents. The production platform is in development.</span><span class="bench-foot-actions"><button class="link" type="button" id="download-example">Download this example</button><button class="link" type="button" id="reset-demo">Reset</button></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="moments" data-theme="dark" id="moments">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">When it matters</p>
+      <h2 class="reveal" style="--d:1">Built for the reviews that move a project.</h2>
+    </div>
+    <div class="moment-list" id="moment-list">
+      <div class="moment is-open">
+        <button class="moment-head" type="button" aria-expanded="true" aria-controls="m1"><span class="moment-no">01</span><span class="moment-word">Strategic investment</span><span class="moment-plus" aria-hidden="true"></span></button>
+        <div class="moment-body" id="m1"><div class="moment-inner"><p>When a strategic investor’s technical team asks for the evidence, hand them a pack they can follow line by line, not a folder they have to decode.</p><img src="assets/img/truck-1000.webp" srcset="assets/img/truck-1000.webp 1000w, assets/img/truck-1800.webp 1800w" sizes="(max-width: 810px) 100vw, 40vw" alt="A haul truck climbing a road inside an open-pit mine" loading="lazy"></div></div>
+      </div>
+      <div class="moment">
+        <button class="moment-head" type="button" aria-expanded="false" aria-controls="m2"><span class="moment-no">02</span><span class="moment-word">Joint venture or earn-in</span><span class="moment-plus" aria-hidden="true"></span></button>
+        <div class="moment-body" id="m2"><div class="moment-inner"><p>Show a partner exactly what supports each figure in the project story, and which questions are still open, before they find them.</p><img src="assets/img/core-boxes-1200.webp" srcset="assets/img/core-boxes-1200.webp 1200w, assets/img/core-boxes-2000.webp 2000w" sizes="(max-width: 810px) 100vw, 40vw" alt="Rows of drill core laid out in labelled core boxes" loading="lazy"></div></div>
+      </div>
+      <div class="moment">
+        <button class="moment-head" type="button" aria-expanded="false" aria-controls="m3"><span class="moment-no">03</span><span class="moment-word">Offtake or stream</span><span class="moment-plus" aria-hidden="true"></span></button>
+        <div class="moment-body" id="m3"><div class="moment-inner"><p>Give buyers and streaming companies a clear thread from every recovery and production assumption back to the testwork behind it.</p><img src="assets/img/ponds-1000.webp" srcset="assets/img/ponds-1000.webp 1000w, assets/img/ponds-1800.webp 1800w" sizes="(max-width: 810px) 100vw, 40vw" alt="Aerial view of rectangular evaporation ponds in a desert" loading="lazy"></div></div>
+      </div>
+      <div class="moment">
+        <button class="moment-head" type="button" aria-expanded="false" aria-controls="m4"><span class="moment-no">04</span><span class="moment-word">Government funding</span><span class="moment-plus" aria-hidden="true"></span></button>
+        <div class="moment-body" id="m4"><div class="moment-inner"><p>Critical-minerals programmes ask for evidence. Assemble it once, with every claim traced to its source and every gap given an owner.</p><img src="assets/img/core-library-1200.webp" srcset="assets/img/core-library-1200.webp 1200w, assets/img/core-library-2000.webp 2000w" sizes="(max-width: 810px) 100vw, 40vw" alt="A long aisle of shelves stacked with archived drill core boxes" loading="lazy"></div></div>
+      </div>
+      <div class="moment">
+        <button class="moment-head" type="button" aria-expanded="false" aria-controls="m5"><span class="moment-no">05</span><span class="moment-word">Sale or merger</span><span class="moment-plus" aria-hidden="true"></span></button>
+        <div class="moment-body" id="m5"><div class="moment-inner"><p>Know what a buyer’s diligence team will find in your files before they do, and walk in with the answers.</p><img src="assets/img/saltlake-1000.webp" srcset="assets/img/saltlake-1000.webp 1000w, assets/img/saltlake-1800.webp 1800w" sizes="(max-width: 810px) 100vw, 40vw" alt="Aerial view of a mineral lake with white salt flats and amber water" loading="lazy"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="principles" data-theme="light">
+  <div class="wrap">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow reveal">Our rules</p>
+        <h2 class="reveal" style="--d:1">It shows its work.</h2>
+      </div>
+      <p class="reveal lead" style="--d:2">Mining decisions carry real money and real liability. So the software is built to be checked, not trusted blindly.</p>
+    </div>
+    <div class="rules">
+      <article class="rule reveal"><span class="rule-no">01</span><h3>Every answer cites a page, slide or cell.</h3><p>If it cannot point to the source, it says so instead of guessing.</p></article>
+      <article class="rule reveal" style="--d:1"><span class="rule-no">02</span><h3>Missing from the files is not the same as missing.</h3><p>Gaps are reported as gaps in what was supplied, never as facts about the project.</p></article>
+      <article class="rule reveal" style="--d:2"><span class="rule-no">03</span><h3>Conflicts are shown, never smoothed over.</h3><p>Two figures that disagree stay side by side, with their context, until a person decides.</p></article>
+      <article class="rule reveal" style="--d:3"><span class="rule-no">04</span><h3>Your experts make the call.</h3><p>Qualified and Competent Persons stay responsible for technical judgement. Orethread prepares the evidence.</p></article>
+    </div>
+    <figure class="wide-figure reveal">
+      <img src="assets/img/core-depth-1100.webp" srcset="assets/img/core-depth-1100.webp 1100w, assets/img/core-depth-2000.webp 2000w" sizes="100vw" alt="A length of drill core with its depth written beside it" loading="lazy">
+      <figcaption>Core is labelled with the depth it came from. We hold every claim to the same standard.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="pilot" data-theme="dark" id="pilot">
+  <div class="pilot-media" aria-hidden="true"><img src="assets/img/tunnel-1400.webp" srcset="assets/img/tunnel-900.webp 900w, assets/img/tunnel-1400.webp 1400w, assets/img/tunnel-2400.webp 2400w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="wrap pilot-inner">
+    <div class="section-head">
+      <p class="eyebrow reveal">The first step</p>
+      <h2 class="reveal" style="--d:1">Start with one project.</h2>
+      <p class="reveal lead" style="--d:2">We are inviting developers and advanced explorers heading into a strategic investment, a partnership, an offtake, a funding application or a sale.</p>
+    </div>
+    <ol class="pilot-steps">
+      <li class="reveal"><span>1</span><h3>Choose the review</h3><p>One project and one counterparty process. We agree the documents, the five questions that matter most and a delivery date.</p></li>
+      <li class="reveal" style="--d:1"><span>2</span><h3>Work through the findings</h3><p>We review the evidence with your team and give every open question an owner.</p></li>
+      <li class="reveal" style="--d:2"><span>3</span><h3>Leave with a pack</h3><p>A source-linked brief, an evidence index, reviewed answers and the actions that remain, ready for the data room you already use.</p></li>
+    </ol>
+    <div class="pilot-cta reveal">
+      <button class="btn" type="button" data-enquire="pilot">Discuss your project<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+      <p>Scope and a fixed fee are agreed before any work begins. Access, storage and deletion are agreed with you before any file is shared.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team" data-theme="light" id="company">
+  <div class="wrap">
+    <div class="section-head split">
+      <div>
+        <p class="eyebrow reveal">Company</p>
+        <h2 class="reveal" style="--d:1">A small team, serious about evidence.</h2>
+      </div>
+      <p class="reveal lead" style="--d:2">Orethread is an early-stage company founded in the UK. Three founding seats are open for people who want to build it from the first line.</p>
+    </div>
+    <div class="people">
+      <article class="person founder reveal">
+        <div class="person-top"><span class="monogram">MN</span><span class="tag">Founder</span></div>
+        <h3>Melusi Ndoro</h3>
+        <p>Leads the company, the first customer pilots and partnerships.</p>
+        <a class="link" href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true"> ↗</span></a>
+      </article>
+      <article class="person seat reveal" style="--d:1">
+        <div class="person-top"><span class="seat-icon" aria-hidden="true"></span><span class="tag tag-open">Founding seat · open</span></div>
+        <h3>AI &amp; document engineer</h3>
+        <p>Own extraction, citations, retrieval and evaluation. You know when a system should answer “not found”.</p>
+        <button class="link" type="button" data-enquire="ai">Talk to Melusi</button>
+      </article>
+      <article class="person seat reveal" style="--d:2">
+        <div class="person-top"><span class="seat-icon" aria-hidden="true"></span><span class="tag tag-open">Founding seat · open</span></div>
+        <h3>Product engineer</h3>
+        <p>Own the product end to end: uploads, the source viewer, the review flow, permissions and deployment.</p>
+        <button class="link" type="button" data-enquire="product">Talk to Melusi</button>
+      </article>
+      <article class="person seat reveal" style="--d:3">
+        <div class="person-top"><span class="seat-icon" aria-hidden="true"></span><span class="tag tag-open">Founding seat · open</span></div>
+        <h3>Mining technologist</h3>
+        <p>A geologist or mining engineer who codes. Shape what the product checks and how its findings read to a technical reviewer.</p>
+        <button class="link" type="button" data-enquire="mining">Talk to Melusi</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq" data-theme="light">
+  <div class="wrap faq-grid">
+    <h2 class="reveal">Good questions.</h2>
+    <div class="faq-list">
+      <details class="reveal"><summary>Can we use Orethread today?</summary><p>The demo on this page uses a fictional project. The platform is being built around paid pilots, so the first teams shape it with their real projects.</p></details>
+      <details class="reveal"><summary>Does it replace our consultants or Qualified Person?</summary><p>No. Your team and advisers make the technical decisions. Orethread makes the evidence behind those decisions faster to find, compare and review.</p></details>
+      <details class="reveal"><summary>How is this different from a data room?</summary><p>A data room stores and shares files. Orethread does the work before anything is shared: it reads the files, links each claim to its source and shows conflicts and gaps with owners. The finished pack then goes into whichever data room you already use.</p></details>
+      <details class="reveal"><summary>Does it check compliance with NI 43-101 or JORC?</summary><p>No. It shows where your documents agree, disagree or lack support. Compliance decisions stay with your Qualified Person or Competent Person and your advisers.</p></details>
+      <details class="reveal"><summary>What can it read?</summary><p>The pilot starts with PDFs, including scans, plus spreadsheets and slide decks. Maps can be stored and viewed inside documents; automated interpretation of maps and geological models is not part of the pilot.</p></details>
+      <details class="reveal"><summary>What happens to our documents?</summary><p>Nothing is uploaded on this website. For a pilot, storage location, access and deletion are agreed in writing before any file is shared. Documents are treated as evidence, never as instructions to the software.</p></details>
+      <details class="reveal"><summary>What does a pilot cost?</summary><p>A fixed fee, agreed once we have seen the size and condition of the document pack and the questions you need answered.</p></details>
+      <details class="reveal"><summary>Who is behind Orethread?</summary><p>Orethread was founded by Melusi Ndoro in the UK and is building its founding team now. If that could be you, use the Company section above.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing" data-theme="dark">
+  <div class="closing-media" aria-hidden="true"><img src="assets/img/ore-1400.webp" srcset="assets/img/ore-900.webp 900w, assets/img/ore-1400.webp 1400w, assets/img/ore-2400.webp 2400w" sizes="100vw" alt="" loading="lazy"></div>
+  <div class="wrap closing-inner">
+    <h2 class="reveal">Bring us one project.</h2>
+    <p class="reveal lead" style="--d:1">We will show you where its thread runs, and where it breaks.</p>
+    <div class="actions reveal" style="--d:2">
+      <button class="btn" type="button" data-enquire="pilot">Start a pilot<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+      <a class="link" href="#demo">Try the demo again</a>
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="container footer"><a class="wordmark" href="#"><img src="assets/mark.svg" width="28" height="28" alt="">orethread.</a><p>Mining project intelligence.<br>An early-stage venture by Melusi Ndoro.</p><div><a href="privacy.html">Privacy</a><a href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">Contact the founder ↗</a></div><span>© 2026 Orethread</span></footer>
 
-<dialog id="source-dialog" class="source-dialog"><div class="dialog-top"><span id="source-filename"></span><button class="icon-button" data-close="source-dialog" aria-label="Close source">×</button></div><div class="document-page"><p class="document-label">Fictional example document</p><h2 id="source-heading"></h2><p id="source-date"></p><div id="source-content"></div><p class="document-footer" id="source-page"></p></div></dialog>
-<dialog id="enquiry-dialog" class="enquiry-dialog"><button class="icon-button close-enquiry" data-close="enquiry-dialog" aria-label="Close enquiry">×</button><p class="small-label">Let’s start a conversation</p><h2 id="enquiry-heading">What are you working on?</h2><p id="enquiry-intro">A little context will help us make the first conversation useful.</p><form id="enquiry-form"><label>Your name<input name="name" autocomplete="name" required maxlength="120"></label><label>Email<input name="email" type="email" autocomplete="email" required maxlength="200"></label><label id="company-label">Company or project<input name="company" required maxlength="160"></label><label id="message-label">What would you like to work through?<textarea name="message" rows="3" required maxlength="2000"></textarea></label><p class="form-note" id="form-note">This prepares your message on your device. Nothing is submitted in the background.</p><button class="button" type="submit" id="enquiry-submit">Prepare your introduction <span aria-hidden="true">↗</span></button></form><div id="enquiry-result" hidden><p>Your introduction is ready. Copy it, then send it to Melusi on LinkedIn.</p><textarea id="prepared-message" rows="8" readonly aria-label="Your prepared introduction"></textarea><div class="result-actions"><button class="button" id="copy-introduction">Copy introduction</button><a class="text-button" id="send-introduction" href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">Open LinkedIn ↗</a></div><p class="form-note" id="copy-status" role="status">Your message has not been sent.</p></div></dialog>
-<div class="toast" id="toast" role="status"></div>
-</body></html>
+<footer class="footer" data-theme="dark">
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-line">Mining project intelligence.<br>Every number has a source.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <div><p>Product</p><a href="#how">How it works</a><a href="#demo">Demo</a><a href="#pilot">Pilot</a></div>
+        <div><p>Company</p><a href="#company">Founding team</a><a href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+        <div><p>Notices</p><a href="privacy.html">Privacy</a><a href="credits.html">Photo credits</a></div>
+      </nav>
+    </div>
+    <p class="footer-word" aria-hidden="true">orethread</p>
+    <div class="footer-base"><span>© 2026 Orethread</span><span>An early-stage company founded by Melusi Ndoro.</span></div>
+  </div>
+</footer>
+
+<dialog class="sheet" id="source-dialog" aria-labelledby="source-heading">
+  <div class="sheet-top"><span class="mono-label" id="source-filename"></span><button class="icon-btn" type="button" data-close="source-dialog" aria-label="Close source"><svg viewBox="0 0 16 16"><path d="m4 4 8 8m0-8-8 8"/></svg></button></div>
+  <article class="doc">
+    <p class="doc-label">Fictional example document</p>
+    <h2 id="source-heading"></h2>
+    <p class="doc-date" id="source-date"></p>
+    <div class="doc-body" id="source-content"></div>
+    <p class="doc-foot" id="source-page"></p>
+  </article>
+</dialog>
+
+<dialog class="modal" id="enquiry-dialog" aria-labelledby="enquiry-heading">
+  <button class="icon-btn modal-close" type="button" data-close="enquiry-dialog" aria-label="Close"><svg viewBox="0 0 16 16"><path d="m4 4 8 8m0-8-8 8"/></svg></button>
+  <p class="eyebrow">Start a conversation</p>
+  <h2 id="enquiry-heading">What are you working on?</h2>
+  <div class="segmented" role="radiogroup" aria-label="Reason for getting in touch">
+    <button type="button" role="radio" aria-checked="true" data-topic="pilot">A pilot</button>
+    <button type="button" role="radio" aria-checked="false" data-topic="seat">A founding seat</button>
+    <button type="button" role="radio" aria-checked="false" data-topic="other">Something else</button>
+  </div>
+  <form id="enquiry-form" novalidate>
+    <label>Your name<input name="name" autocomplete="name" required maxlength="120"></label>
+    <label><span id="org-label">Company and project</span><input name="org" required maxlength="200"></label>
+    <label><span id="message-label">What decision is coming up?</span><textarea name="message" rows="4" required maxlength="2000"></textarea></label>
+    <p class="form-note">Nothing is sent from this website. We prepare your note, copy it and open Melusi’s LinkedIn so you can send it yourself.</p>
+    <button class="btn" type="submit">Copy note and open LinkedIn<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></button>
+  </form>
+  <div class="enquiry-done" id="enquiry-done" hidden>
+    <p><b>Your note is ready.</b> Copy it below and paste it into a LinkedIn message to Melusi.</p>
+    <textarea id="prepared-message" rows="7" readonly aria-label="Your prepared note"></textarea>
+    <a class="btn btn-small" href="https://www.linkedin.com/in/melusindoro" target="_blank" rel="noopener noreferrer">Open LinkedIn again<span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
